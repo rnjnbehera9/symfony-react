@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="App"
+>
+  <header
+    className="App-header"
+  >
+    <h1
+      className="ui header"
+    >
+      My Movies
+    </h1>
+    <div>
+      <table
+        className="ui table"
+      >
+        <thead>
+          <tr>
+            <th>
+              ID
+            </th>
+            <th>
+              Title
+            </th>
+            <th>
+              Movie Count
+            </th>
+            <th>
+              Actions
+            </th>
+            <th />
+          </tr>
+        </thead>
+        <tbody />
+      </table>
+      <div>
+        <form
+          className="ui form"
+          onSubmit={[Function]}
+        >
+          <div
+            className="field"
+          >
+            <label>
+              Title: 
+            </label>
+            <input
+              onChange={[Function]}
+              placeholder="enter movie title"
+              required={true}
+              value={Array []}
+            />
+          </div>
+          <button
+            className="ui button"
+            onClick={[Function]}
+            type="submit"
+          >
+            Add Movie
+          </button>
+        </form>
+      </div>
+    </div>
+  </header>
+</div>
+`;
