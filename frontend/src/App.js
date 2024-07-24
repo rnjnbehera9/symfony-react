@@ -1,15 +1,31 @@
 import './App.css';
 import React from 'react';
 import MovieList from './MovieList';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes , useLocation} from 'react-router-dom';
+import Login from './Login';
+import Navbar from './Navbar';
+
 
 function App() {
+    const location = useLocation();
+    const showHome = location.pathname === '/';
     return (
-        <Router>
+        <>
+       
+        {
+          !showHome && (
+            <> 
+            <Navbar/>
+         
+            </>
+          )
+        }
             <Routes>
-                <Route path="/" element={<MovieList/>} />
+                <Route path="/" element={<Login/>} />
+                <Route path="/movies" element={<MovieList/>} />
             </Routes>
-        </Router>
+      
+    </>    
     );
 }
 

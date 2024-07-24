@@ -5,12 +5,22 @@ import MovieForm from './MovieForm';
 import IncreaseCountButton from './IncreaseCountButton';
 import { confirmAlert } from 'react-confirm-alert'; // Import
 import 'react-confirm-alert/src/react-confirm-alert.css'; // Import css
+import {useNavigate} from 'react-router-dom';
 
 
 const MovieList = () => {
+    const navigate = useNavigate(); 
+    const userInfo = localStorage.getItem("userinfo");
+    const navigateToLogin = () => {
+     if(!userInfo){
+       navigate('/');
+     }
+     
+    };
     const [movies, setMovies] = useState([]);
     const [deleteMsg, setDeleteMsg] = useState('');
     useEffect(() => {
+      navigateToLogin();
       fetchMovies();
     }, []);
   
@@ -67,7 +77,7 @@ const MovieList = () => {
                         content={deleteMsg}
                     />
                     }
-                      <Table>
+                      <table>
                           <thead>
                               <tr>
                                   <th>ID</th>
@@ -93,7 +103,7 @@ const MovieList = () => {
                                       </tr>
                           ))}
                           </tbody>
-                      </Table>
+                      </table>
                       <MovieForm onAddition={onAddition} />
                   </div>
               }

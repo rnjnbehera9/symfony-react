@@ -19,10 +19,12 @@ const MovieForm = (props) => {
   return (
     <div>            
         <Form  onSubmit={onSubmit}>
+            <br/>
             <Form.Field >
                 <label>Title: </label>
                 <input placeholder='enter movie title' value={movieTitle} onChange={(e) => setMovieTitle(e.target.value)} required/>
             </Form.Field>
+            <br/>
             <Button type='submit'>Add Movie</Button>
         </Form>
     </div>
