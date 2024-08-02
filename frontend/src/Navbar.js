@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import {
   MDBContainer,
   MDBNavbar,
@@ -11,10 +10,10 @@ import {
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
-    const [showNavExternal, setShowNavExternal] = useState(false);
+    
   return (
     <>
-    <MDBCollapse show={showNavExternal}>
+    <MDBCollapse >
     <div >
       <MDBNavbarBrand>Navbar</MDBNavbarBrand>
       <span className='text-muted'> <Link to="/movies">My Movies </Link></span>
@@ -28,7 +27,7 @@ const Navbar = () => {
             aria-controls='navbarToggleExternalContent'
             aria-expanded='false'
             aria-label='Toggle navigation'
-            onClick={() => setShowNavExternal(!showNavExternal)}
+           
           >
             <MDBIcon icon='bars' fas />
           </MDBNavbarToggler>        

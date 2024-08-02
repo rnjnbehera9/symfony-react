@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Form } from 'semantic-ui-react'
+import { Form } from 'semantic-ui-react'
 import { updateMoviesCount } from './service';
 function IncreaseCountButton(props) {
 
@@ -12,7 +12,7 @@ function IncreaseCountButton(props) {
   return (
     <div>        
         <Form  onSubmit={onSubmit}>
-            <Button type='submit'>Increase Count</Button>
+            <button type='submit'>Increase Count</button>
         </Form>
 </div>
   )

@@ -5,15 +5,18 @@ import { getUsers } from './service';
 
 const Login = () => {
     const navigate = useNavigate();  
+    // React States
+    const [uname, setUname] = useState([]);
+    const [pass, setPass] = useState([]);
+    const [isSubmitted, setIsSubmitted] = useState(false);
   
     useEffect(() => {
         localStorage.setItem("userinfo", '');
-      
+        setIsSubmitted(false);
+        setUname([])
+        setPass([])
       }, []);
-    // React States
-     const [isSubmitted, setIsSubmitted] = useState(false);
-     const [uname, setUname] = useState([]);
-     const [pass, setPass] = useState([]);
+
      const navigateToMovies = () => {
       // 👇️ navigate to /contacts
       navigate('/movies');

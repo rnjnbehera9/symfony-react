@@ -1,5 +1,5 @@
 import React, { useState }  from 'react'
-import { Button, Form } from 'semantic-ui-react'
+import { Form } from 'semantic-ui-react'
 import { createMovies } from './service';
 
 
@@ -25,7 +25,7 @@ const MovieForm = (props) => {
                 <input placeholder='enter movie title' value={movieTitle} onChange={(e) => setMovieTitle(e.target.value)} required/>
             </Form.Field>
             <br/>
-            <Button type='submit'>Add Movie</Button>
+            <button type='submit'>Add Movie</button>
         </Form>
     </div>
   )

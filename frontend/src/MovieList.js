@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Header, Message, Table, Button } from 'semantic-ui-react';
+import { Header, Message } from 'semantic-ui-react';
 import { getMovies, deleteMovie } from './service';
 import MovieForm from './MovieForm';
 import IncreaseCountButton from './IncreaseCountButton';
@@ -11,19 +11,19 @@ import {useNavigate} from 'react-router-dom';
 const MovieList = () => {
     const navigate = useNavigate(); 
     const userInfo = localStorage.getItem("userinfo");
-    const navigateToLogin = () => {
-     if(!userInfo){
-       navigate('/');
-     }
-     
-    };
+
     const [movies, setMovies] = useState([]);
     const [deleteMsg, setDeleteMsg] = useState('');
     useEffect(() => {
       navigateToLogin();
       fetchMovies();
     }, []);
-  
+    const navigateToLogin = () => {
+      if(!userInfo){
+        navigate('/');
+      }
+      
+     };
     const fetchMovies = async () => {
         const response = await getMovies();
         setMovies(response.data);
@@ -98,7 +98,7 @@ const MovieList = () => {
                                             <IncreaseCountButton onIncrease={onIncrease} movieId={movie.id} /> 
                                           </td>
                                           <td>
-                                             <Button onClick={() => handleOnClick(movie.id)}>Delete</Button>  
+                                             <button onClick={() => handleOnClick(movie.id)}>Delete</button>  
                                           </td>
                                       </tr>
                           ))}

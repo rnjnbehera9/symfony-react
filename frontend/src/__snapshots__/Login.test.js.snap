@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="app"
+>
+  <div
+    className="login-form"
+  >
+    <div
+      className="title"
+    >
+      Sign In
+    </div>
+    <div
+      className="form"
+    >
+      <form
+        onSubmit={[Function]}
+      >
+        <div
+          className="input-container"
+        >
+          <label>
+            Username 
+          </label>
+          <input
+            name="uname"
+            onChange={[Function]}
+            required={true}
+            type="text"
+            value={Array []}
+          />
+        </div>
+        <div
+          className="input-container"
+        >
+          <label>
+            Password 
+          </label>
+          <input
+            name="pass"
+            onChange={[Function]}
+            required={true}
+            type="password"
+            value={Array []}
+          />
+        </div>
+        <div
+          className="button-container"
+        >
+          <input
+            type="submit"
+          />
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+`;
