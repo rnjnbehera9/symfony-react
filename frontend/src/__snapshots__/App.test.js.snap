@@ -2,67 +2,59 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="App"
+  className="app"
 >
-  <header
-    className="App-header"
+  <div
+    className="login-form"
   >
-    <h1
-      className="ui header"
+    <div
+      className="title"
     >
-      My Movies
-    </h1>
-    <div>
-      <table
-        className="ui table"
-      >
-        <thead>
-          <tr>
-            <th>
-              ID
-            </th>
-            <th>
-              Title
-            </th>
-            <th>
-              Movie Count
-            </th>
-            <th>
-              Actions
-            </th>
-            <th />
-          </tr>
-        </thead>
-        <tbody />
-      </table>
-      <div>
-        <form
-          className="ui form"
-          onSubmit={[Function]}
-        >
-          <div
-            className="field"
-          >
-            <label>
-              Title: 
-            </label>
-            <input
-              onChange={[Function]}
-              placeholder="enter movie title"
-              required={true}
-              value={Array []}
-            />
-          </div>
-          <button
-            className="ui button"
-            onClick={[Function]}
-            type="submit"
-          >
-            Add Movie
-          </button>
-        </form>
-      </div>
+      Sign In
     </div>
-  </header>
+    <div
+      className="form"
+    >
+      <form
+        onSubmit={[Function]}
+      >
+        <div
+          className="input-container"
+        >
+          <label>
+            Username 
+          </label>
+          <input
+            name="uname"
+            onChange={[Function]}
+            required={true}
+            type="text"
+            value={Array []}
+          />
+        </div>
+        <div
+          className="input-container"
+        >
+          <label>
+            Password 
+          </label>
+          <input
+            name="pass"
+            onChange={[Function]}
+            required={true}
+            type="password"
+            value={Array []}
+          />
+        </div>
+        <div
+          className="button-container"
+        >
+          <input
+            type="submit"
+          />
+        </div>
+      </form>
+    </div>
+  </div>
 </div>
 `;

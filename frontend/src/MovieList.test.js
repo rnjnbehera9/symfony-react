@@ -23,7 +23,10 @@ test('renders movies list', async () => {
 
 it('renders correctly', () => {
     const tree = renderer
-      .create(<MovieList/>)
+      .create(        
+      <BrowserRouter>
+        <MovieList />
+    </BrowserRouter>)
       .toJSON();
     expect(tree).toMatchSnapshot();
   });

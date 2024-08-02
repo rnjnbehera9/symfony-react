@@ -13,9 +13,7 @@ exports[`renders correctly 1`] = `
       My Movies
     </h1>
     <div>
-      <table
-        className="ui table"
-      >
+      <table>
         <thead>
           <tr>
             <th>
@@ -40,6 +38,7 @@ exports[`renders correctly 1`] = `
           className="ui form"
           onSubmit={[Function]}
         >
+          <br />
           <div
             className="field"
           >
@@ -53,9 +52,8 @@ exports[`renders correctly 1`] = `
               value={Array []}
             />
           </div>
+          <br />
           <button
-            className="ui button"
-            onClick={[Function]}
             type="submit"
           >
             Add Movie
