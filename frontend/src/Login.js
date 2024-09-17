@@ -8,6 +8,7 @@ const Login = () => {
     // React States
     const [uname, setUname] = useState([]);
     const [pass, setPass] = useState([]);
+    const [err, setErr] = useState([]);
     const [isSubmitted, setIsSubmitted] = useState(false);
   
     useEffect(() => {
@@ -15,6 +16,7 @@ const Login = () => {
         setIsSubmitted(false);
         setUname([])
         setPass([])
+        setErr([])
       }, []);
 
      const navigateToMovies = () => {
@@ -34,10 +36,12 @@ const Login = () => {
         });
           
        // Compare user info
-       if (response.data.length >0) {
-        localStorage.setItem("userinfo", response.data);
+       if (response.length >0) {
+        setErr([]);
+        localStorage.setItem("userinfo", response);
          setIsSubmitted(true);
        }else{
+        setErr(response);
         localStorage.setItem("userinfo", '');
          setIsSubmitted(false);
        } 
@@ -48,6 +52,7 @@ const Login = () => {
      // JSX code for login form
      const renderForm = (
        <div className="form">
+        <div className="error">{err.error}</div>
          <form onSubmit={handleSubmit}>
            <div className="input-container">
              <label>Username </label>

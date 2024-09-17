@@ -26,13 +26,13 @@ const MovieList = () => {
      };
     const fetchMovies = async () => {
         const response = await getMovies();
-        setMovies(response.data);
+        setMovies(response);
         setDeleteMsg('')
     };
   
     const handleDelete = async (id) => {
         const response = await deleteMovie(id);
-        setDeleteMsg(response.data[0].message)
+        setDeleteMsg(response[0].message)
         fetchMovies();
     };
 

@@ -6,7 +6,7 @@ function IncreaseCountButton(props) {
     const onSubmit = async () => {
         const response = await updateMoviesCount(props.movieId);
         if (response) {
-          props.onIncrease(response.data, props.movieId);
+          props.onIncrease(response, props.movieId);
       }
     };
   return (

@@ -11,7 +11,7 @@ const MovieForm = (props) => {
         const response = await createMovies({
             "title": movieTitle
         });
-        props.onAddition(response.data)
+        props.onAddition(response)
         setMovieTitle([])
     };
 

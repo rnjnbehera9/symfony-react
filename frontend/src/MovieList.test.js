@@ -8,7 +8,7 @@ import { getMovies } from './service';
 jest.mock('./service');
 
 test('renders movies list', async () => {
-    getMovies.mockResolvedValue({ data: [{ id: 1, title: 'Test Movie', count: 1 }] });
+    getMovies.mockResolvedValue([{ id: 1, title: 'Test Movie', count: 1 }] );
 
     render(
         <BrowserRouter>
